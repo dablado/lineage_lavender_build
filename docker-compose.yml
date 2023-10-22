@@ -5,15 +5,16 @@ services:
       - BRANCH_NAME=lineage-18.1
       - DEVICE_LIST=lavender
       - SIGN_BUILDS=true
-      - PARALLEL_JOBS=4
+      - PARALLEL_JOBS=8
       - TZ=Europe/Madrid
     volumes:
       - lineage:/srv/src
       - ~/dev/repo/lineageos/zips:/srv/zips
       - ~/dev/repo/lineageos/logs:/srv/logs
-      - ~/dev/repo/lineageos/cache:/srv/ccache
+      - cache:/srv/ccache
       - ~/dev/repo/lineageos/keys:/srv/keys
     image: lineageos4microg/docker-lineage-cicd
 
 volumes:
+  cache:
   lineage:
