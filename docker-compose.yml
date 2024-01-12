@@ -7,6 +7,10 @@ services:
       - SIGN_BUILDS=true
       - PARALLEL_JOBS=8
       - TZ=Europe/Madrid
+      - DELETE_OLD_ZIPS=1
+      - DELETE_OLD_LOGS=1
+      - CLEAN_OUTDIR=true
+      - CLEAN_AFTER_BUILD=true
     volumes:
       - lineage:/srv/src
       - ~/dev/repo/lineageos/zips:/srv/zips
